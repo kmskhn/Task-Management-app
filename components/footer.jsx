@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div id="main-footer" className="bg-white">
+    <div id="main-footer" className="bg-white pb-5">
       <div className="container flex">
         <div style={{ width: "20%" }} className="pr-10">
           <p className="footer-section-title">Quick Links</p>
