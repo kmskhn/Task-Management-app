@@ -33,6 +33,7 @@ const InsightsPage = () => {
           {placeholders.map((el) => {
             return (
               <li
+                key={el.name}
                 className="p-1 m-1 inline-block rounded"
                 style={{ background: el.color }}
               >
