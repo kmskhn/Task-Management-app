@@ -20,8 +20,8 @@ import {
 
  function DashboardLayout({ children })  {
     return (
-        <div className="flex min-h-screen bg-muted/40">
-          <aside className="fixed inset-y-0 left-0 z-10 w-14 flex-col border-r bg-background flex">
+        <div className="flex min-h-screen ">
+          <aside className="w-14 flex-col border-r bg-slate-500/30 flex">
             <nav className="flex flex-col items-center gap-4 px-2 py-4">
               <Link
                 href="/"
@@ -78,7 +78,7 @@ import {
 
             </nav>
           </aside>
-          <div className="w-full p-10">
+          <div className="w-full py-10">
           {children}
 
           </div>

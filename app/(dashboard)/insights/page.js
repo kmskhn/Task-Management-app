@@ -27,7 +27,7 @@ const placeholders = [
 
 const InsightsPage = () => {
   return (
-    <div className=" w-full ml-7">
+    <div className=" mx-7">
       <div className="flex justify-end mr-[120px]">
         <ul>
           {placeholders.map((el) => {
