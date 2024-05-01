@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { UserNav } from "./(dashboard)/tasks/components/user-nav";
+import Link from "next/link";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +14,39 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="bg-gradient-to-b from-black/90 to-transparent text-white py-4">
+          <div class="container flex items-center justify-between">
+            <Link
+              href="https://www.smartdubai.ae/"
+              aria-label="Dubai Government Logo"
+              class="dda-main-header__gov-logo"
+            >
+              <img
+                width="200px"
+                src="https://d2ysif0spfh53o.cloudfront.net/wp-content/themes/dubaimunicipality/assets/images/logo-2-gov.svg"
+              />
+            </Link>
+            <Link href="https://www.dm.gov.ae/" aria-label="Dubai Municipality">
+              <img
+                src="https://d2ysif0spfh53o.cloudfront.net/wp-content/themes/dubaimunicipality/assets/images/dmLogo.svg"
+                class="dda-main-header__logo"
+                alt="Dubai Municipality logo"
+              />
+            </Link>
+          </div>
+        </header>
+        {children}
+        {/* <footer className="bg-gray-800 text-white py-4">
+          <div className="container mx-auto px-4">
+            <p className="text-center">
+              © 2024 My Website. All rights reserved.
+            </p>
+          </div>
+        </footer> */}
+
+        <Footer/>
+      </body>
     </html>
   );
 }
